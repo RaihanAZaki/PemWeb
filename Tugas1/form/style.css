@@ -1,0 +1,187 @@
+.center, .front-face, .contents, .back-face {
+  position: absolute;
+}
+
+.center {
+  top: 10%;
+  left: 50%
+  transfrom: translateY(-50%, -50%);
+  height: 400px;
+  width: 290px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform .7s;
+}
+
+.center:hover > .back-face{
+  transform: rotateY(0deg);
+}
+
+.center:hover > .front-face{
+  transform: rotateY(-180deg);
+}
+
+.front-face, .back-face {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(../img/upj2.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform .7s cubic-bezier(.4,.2,.2,1);
+
+}
+
+.contents {
+  left: 0;
+  top: 35%;
+  width: 100%;
+  perspective: 100px;
+  transfrom: translateY(-50%) translateZ(60px);
+}
+
+.front p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.front p::after {
+  content: '';
+  display: block;
+  left: 0;
+  right: 0;
+  height: 2px;
+  width:100px; 
+  background: white;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.front span {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.back-face {
+  background: linear-gradient(45deg, #043348 0%, #032);
+  transform: rotateY(180deg);
+}
+.back {
+  color: white;
+}
+.back h2 {
+  font-size: 33px;
+  padding-bottom: 5px;
+  height: 10px;
+  margin-top: -2px;
+}
+
+.back span {
+  font-size: 25px;
+}
+
+.hero-btn-dua {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  background: #a5cd39;
+  border: 1px solid #ddd;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: #a5cd39;
+  position: relative;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.hero-btn-dua:hover {
+  border: 1px solid #a5cd39;
+  background: #a5cd39;
+  transition: 1s;
+}
+
+/* CARD 2*/
+body {
+  display: grid;
+  place-items: center;
+  background: #f2f2f2;
+}
+.card {
+  position: relative;
+  height: 470px;
+  width: 340px;
+  display: block;
+  background: white;
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+}
+
+.card .image {
+  background: black;
+  height: 400px;
+  overflow: hidden;
+}
+
+.card-avtive, .image img {
+  height: 100%;
+  width: 100%;
+}
+
+.card:hover .image img {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+.card .konten {
+  position: absolute;
+  bottom: 0px;
+  background: white;
+  width: 100%;
+  text-align: center;
+  padding: 20px 30px;
+}
+
+.konten .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3333;
+}
+
+.konten .sub-title{
+  font-size: 18px;
+  font-weight: 500;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.bottom p {
+  color: #6666;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.8em;
+}
+
+.bottom button {
+  float: left;
+  padding: 7px 15px;
+  font-size: 17px;
+  background: #e74c3c;
+  color: white;
+  font-weight: 500;
+  border: none;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.bottom button:hover {
+  transform: scale(0.9); 
+  background: #e64533;
+}
+
+.bottom {
+  display:none;
+}

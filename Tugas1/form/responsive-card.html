@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/form/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <div class="image">
+            <img src="../img/upj2.png" alt="">
+        </div>
+        <div class="konten">
+            <div class="title">PMB - REGULAR RAPOR</div>
+            <div class="sub-title">Tahun Akademik 2023/2024 - PMB Reguler Rapor Gelombang 1</div>
+            <div class="bottom">
+                <p></p>
+                <button>Daftar</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $('.card').hover(function(){
+            if($(this). hasClass("active")) {
+                $('.card .bottom').slideUp(function(){
+                    $('.card').removeClass("active");
+                });
+            }else {
+                $('.card').addClass("active");
+                $('.card .bottom').stop().slideDown();
+            }
+        }) 
+    </script>
+</body>
+</html>
